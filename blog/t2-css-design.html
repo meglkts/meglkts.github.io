@@ -11,34 +11,36 @@
   <h4>May 31, 2015</h4>
 
   <section>
-      <h3>Position Property</h3>
+      
           <p>The position property can be one of the trickiest, I have found, in styling a website.  This is one of the areas I struggled with the most when creating my first website.  In fact, I already have some ideas on position variables I want to change after I write this!  One of the main concepts in understanding position is realizing that the position of an element can be based on the window, other elements, or an element's own natural position.  This can definitely be confusing at first.  It requires practice for sure, and also some good images.  I am going to include some of the reosurces I found most helpful as well.</p>
-      <h3>Using ```position: relative;```</h3>
+      <h3><pre><code>position: relative;</code></pre></h3>
           <p>
-            To understant ```relative``` position, it's best to first consider ```static``` position.  An element with "no position" will be listed in order.  You could give no position to any of your elements have a vertical list of each element in order of your HTML code.  However, probably this is not the aesthetic website you are going for.  If you wish to move your element from its natural position, you can use ```relative``` which will move the element in a specified direction <i>relative to its original position</i> .  The best image I found for this property was here by the Mozilla Developer Network.
-            <img src="https://mdn.mozillademos.org/files/3215/relative-positioning.png">
+            To understant relative position, it's best to first consider static position.  An element with "no position" will be listed in order.  You could give no position to any of your elements have a vertical list of each element in order of your HTML code.  However, probably this is not the aesthetic website you are going for.  If you wish to move your element from its natural position, you can use relative which will move the element in a specified direction <i>relative to its original position</i> .  The best image I found for this property was here by the Mozilla Developer Network.
+            
+            <p><img src="https://mdn.mozillademos.org/files/3215/relative-positioning.png"></p>
 
-            Notice how the position of #2 is relative to what its position would have been.  Also note that the original "space" intended for #2 has been preserved.  It's like a "freeze" has been placed on the page and the one element with relative positioning has been dragged to a new spot with everything else in tact.
-
-            For more explanation see this article on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position"></a> by Mozilla Developer Network.
+            <p> 
+              Notice how the position of #2 is relative to what its position would have been.  Also note that the original "space" intended for #2 has been preserved.  It's like a "freeze" has been placed on the page and the one element with relative positioning has been dragged to a new spot with everything else in tact.
+            </p>
+            For more explanation see this article on position by <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position"> Mozilla Developer Network.</a>
           </p>
        
-       <h3>Using ```position: absolute```</h3>
+       <h3><pre><code>position: absolute</code></pre></h3>
           <p>  
-            If you are trying to move your element to the specific position you want on the page AND you want this aciton to be independent of other similar elements, this is probably the property for you.  One major difference between ```relative``` and ```absolute``` is that the original space of the element is <i>not</i> preserved.  If an element has ```absolute``` positioning, then it is removed from the "lineup" and the other elements operate as though it was never there.  The element with absolute position is only relative to "parent" elements.  You can then adjust the location of this element by specifying the distance from the boarders of its container.  You can use other CSS properties such as ```top, bottom, left, right``` to achieve this.  If there is no "parent" then the absolute position will be relative to the body of the HTML document.
+            If you are trying to move your element to the specific position you want on the page AND you want this aciton to be independent of other similar elements, this is probably the property for you.  One major difference between relative and absolute is that the original space of the element is <i>not</i> preserved.  If an element has absolute positioning, then it is removed from the "lineup" and the other elements operate as though it was never there.  The element with absolute position is only relative to "parent" elements.  You can then adjust the location of this element by specifying the distance from the boarders of its container.  You can use other CSS properties such as top, bottom, left, right to achieve this.  If there is no "parent" then the absolute position will be relative to the body of the HTML document.
           </p>
-      <h3>Using ```position: fixed```</h3>
+      <h3><pre><code>position: fixed</code></pre></h3>
           <p>
-            The ```fixed``` position property is a little easier to work with and serves a very specific purpose.  We have all navigated on pages where a specific link or heading is visible no matter where we are on the page.  This is ```fixed``` positioning.  This property can be useful if we want a link or other feature to be accessible at all times.  When the position of an element is ```fixed``` it will remain in the specficied location (alignment, corner, etc.) at all times, no matter where the user scrolls.  The position of a ```fixed``` element can be thought of as relative to the visible window, not relative to any other elements on the page.
+            The fixed position property is a little easier to work with and serves a very specific purpose.  We have all navigated on pages where a specific link or heading is visible no matter where we are on the page.  This is fixed positioning.  This property can be useful if we want a link or other feature to be accessible at all times.  When the position of an element is fixed it will remain in the specficied location (alignment, corner, etc.) at all times, no matter where the user scrolls.  The position of a fixed element can be thought of as relative to the visible window, not relative to any other elements on the page.
           </p>
         
         <h3>More learning</h3>
             I chose to dive deeper into this CSS styling property not because I am an expert but because I think it's a very important property and one that I want to become better at using.  Below are a few resources I found most helpful in getting a better understanding of the ```position``` property.
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position"></a>Mozilla Developer Network</li>
-              <li><a href="http://learnlayout.com/toc.html"></a>Learn CSS Layout</li>
-              <li><a href="http://www.w3schools.com/css/css_positioning.asp"></a>w3schools</li>
-              <li><a href="http://www.codecademy.com/courses/web-beginner-en-6merh/3/1"></a>Codecademy</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">Mozilla Developer Network</a></li>
+              <li><a href="http://learnlayout.com/toc.html">Learn CSS Layout</a></li>
+              <li><a href="http://www.w3schools.com/css/css_positioning.asp">w3schools</a></li>
+              <li><a href="http://www.codecademy.com/courses/web-beginner-en-6merh/3/1">Codecademy</a></li>
             </ul>
 
   </section>
