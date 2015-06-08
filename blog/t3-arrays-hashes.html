@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+  <title>Arrays and Hashes</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+</head>
+
+<main>
+  <h1>Post #3: Arrays and Hashes</h1>
+  <h2>What are they about and why are they useful?</h2>
+  <h4>June 7, 2015</h4>
+
+  <section>
+    <p>
+      In my initial exploration of Ruby, I found myself particularly enjoying using arrays.  Given my background as both a lover, admirer, and teacher of math, this made sense to me.  They are orderly, you can call a method to each element in an array fairly easily, you can sort them according to their values, etc.  Overall, they made sense to me.  However, in my discussion with a DBC alum he introduced me to the concept of a "hash" as an alternate to an array.  I had very little experience with this new concept.  I had dabbled in the <a href="http://rubymonk.com/learning/books/1-ruby-primer/chapters/10-hashes-in-ruby/lessons/47-hashes-in-and-out">hash section on Ruby Monk</a>, but that was about it.  Hashes are definitley a Ruby concept I needed a little more exposure to and practice using.
+    </p>
+    <p>
+      From my understanding, the best way to think of an array is a set of elements that are indexed, that is to say positioned in a certain order.  I like to associate most concepts in coding to algebra.  I think of an array as a list of ordered pairs, where the "x" value or "input" is the index or position of the elements in the array.  Then the element itself that is listed in said position is like the "y" value or "output" of the ordered pair.You can use array methods to easily identify the first element, the last element, or anything in between.  You can also identify the position of an element of interest.  In addition you can apply an operation or a method to each element in the array.  I think of this similar to a transformation in math class, or in some cases like the distributive property.  I think it's easy to see how an indexed set of numbers can be very helpful such as organizing and analyze a collection of data.  Using methods such as sort, collect, count, and others you can do actions such as write the elements in a certain order, identify repeat elements, identify the quantity of elements, or do all of these.
+    </p>
+    <p>
+      If you are new to arrays, below are some commands to help explain how to create an array and how to identify certain features in the array.
+      <summary><code>
+        name_array = Array.new
+        name_array.push("Meghan", "Lee", "Kline", "Tuls")
+        puts name_array[1]
+        puts name_array[-1]
+        puts name_array.index("Kline")
+        puts name_array.index("Meghan")
+      </code></summary>
+        The above lines would yield the following:
+        <summary><code>
+        #creates an empty array named megs_array
+        #adds the elements listed to the array in order
+        Lee
+        Tuls
+        2
+        0
+        </code></summary>
+        Note how the positions are labeled.  From the beginning we start with 0.  From the end we start with -1.
+    </p>
+    <p>
+      A hash on the other hand does not have an index or an order as an array does.  A hash is a set of keys and values that are matched to one another.  Again, I think of it as an ordered pair, but this time there is no sequence and one of the values in the pair does not need to be a position number.  A hash could be the pair of two strings, the pair of two integers or fixnums, or any combination.  Hopefully you can see why this might be more useful in many applications.  Let's say you want to "jump" to a specific element and its key or value.  In the case of a hash, you don't need to know position, you don't need to sort anything, all you need is one of the two in the pair, key or value, and you can identify its mate.  You can also ask a hash to list its values or list its keys to see what it contains.  A hash is written inside {} brackets rather than square [] brackets.  See the example below to introduce yourself to some of the features of a hash.
+      <summary><code>
+      megs_hash = Hash.new
+      megs_hash = {"Name" => "Meghan"}
+      megs_hash.store("Age", 28)
+      megs_hash.store("Hometown", "Chicago")
+      megs_hash.default = "Not in directory"
+      </code></summary>
+      The above code would create a hash.  Note there are different syntax you can use for assigning and adding keys and values.  The first item listed is the key; the second is the value.  The last line containing .default will print if you ask for a key that does not exist in the hash.  This can be useful for identiying holes.
+
+      If you then called the following code, you can see what prints to the console.
+      <summary><code>
+      puts megs_hash
+      puts megs_hash["Name"]
+      puts megs_hash["Age"]
+      puts megs_hash["Hometown"]
+      puts megs_hash["Phone Number"]
+      puts megs_hash.key("Chicago")
+      puts megs_hash.values
+      puts megs_hash.keys  
+
+      {"Name"=>"Meghan", "Age"=>28, "Hometown"=>"Chicago"}
+      Meghan #gives the value for the key
+      28
+      Chicago
+      Not in directory #remember this is not in the hash and we set a default value of "Not in directory"
+      Hometown #this prints the corresponding key
+      Meghan #these 3 lines are all the values in the hash
+      28
+      Chicago
+      Name #these 3 lines are all the keys in the hash
+      Age
+      Hometown
+      </code></summary>
+      <p>
+        This was certainly not an exaustive explanation of arrays, hashes, their differences, and their potentials; however, I hope if gave you a brief view into how to create them and how to identify their elements.  Also, it should give you some insight into how each might be useful depending on the purpose of your code.
+      </p>
+  </section>
+
+  <footer>
+    Established May 2015.  <a href="https://twitter.com/meglkts">Follow me.</a> <a href="https://www.facebook.com/meg.kline.3">Friend me.</a> <a href="https://www.linkedin.com/in/meghanklinetuls">Connect with me.</a> 
+  </footer>
+</main>
