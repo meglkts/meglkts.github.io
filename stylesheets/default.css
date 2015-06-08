@@ -36,13 +36,16 @@ ul{
 
 #photo{
 	width: 50%;
-	float: left;
+	display: inline-block;
 	padding: 10px;
+	width: 40%;
 }
 
 #menu{
 	font-size: 2em;
 	line-height: 300%;
+	display: inline-block;
+	width: 40%;
 }
 
 #bloglist{
@@ -83,6 +86,6 @@ a:active{
 footer{
 	font-size: 1.5em;
 	text-align: center;
-	position: relative;
+	position: fixed;
 	margin: 100% 20% 5% 20%;
 }
