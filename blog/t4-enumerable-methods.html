@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <title>Technical Post 4</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+</head>
+
+<main>
+  <h1>Post #4: Enumerable#cycle</h1>
+  <h2>How does it work?</h2>
+  <h4>June 13, 2015</h4>
+
+  <section id = "blogpost">
+    <p>
+      Cycle is another aptly named method in Ruby.  When <code>#cycle</code> is called on an array, the method cycles through each element infinitely unless a break is called or an argument is used.
+    </p>
+    <p>For example,</p>
+        <summary><code>array = ["mama", "papa", "baby"]</code></summary>
+        <summary><code>array.cycle</code><summary> 
+        <summary><code>#=> mama, papa, baby, mama, papa, baby, mama, papa, baby, mama, papa, baby, mama, papa, baby, mama...</code><summary>
+        <p>Whereas,</p> 
+        <summary><code>array.cycle(2)</code><summary>
+        <summary><code>#=> mama, papa, baby, mama, papa, baby</code><summary>
+  
+    <p>
+      If you wish to print the cycle to the console, then you can use the block:
+    </p>
+    <summary><code>array.cycle(3) {|x| puts x}</code></summary>
+
+    <p>
+      The cycle could also be stopped at a specific point such as,
+    </p>
+      <summary><code>array.cycle do |x|</code></summary>
+      <summary><code>break if x == "papa"</code></summary>
+    <p>
+      The <code>#cycle</code> method does not automatically store the values, so you could choose to make a new array and push the cycled values to the array.
+    </p>
+    <p>
+      Hopefully you are starting to think of some situations where <code>#cycle</code> might be useful.  This might incude when are you looking to assign roles or positions to a group of people.  You could combine the <code>#zip</code> and the <code>#cycle</code> methods to create a distribution of responsiblities.  Unfortunately <code>#cycle</code> will only run a complete course.  It is not possible to stop at a certain number of elements except at the end of a full cycle.  I think this is probably the biggest limitation of the method, similar to <code>n.times do</code>.
+    </p>
+      <ul>
+          <li><h3>RESOURCES for <code>Enumerable#cycle</code></h3></li>
+          <li><a href="http://www.globalnerdy.com/2008/07/06/enumerating-enumerable-enumerablecycle/">Global Nerdy Tech Blog on <code>Enumerable#cycle</code></a></li>
+          <li><a href="http://www.sitepoint.com/about-us/">SitePoint on Enumerables (see <code>#cycle</code> section)</a></li>
+          <li><a href="http://ruby-doc.org/core-2.2.2/Enumerable.html#method-i-cycle">And of course, Ruby Docs</a></li>
+      </ul>
+  </section>
+
+  <footer>
+    Established May 2015.  <a href="https://twitter.com/meglkts">Follow me.</a> <a href="https://www.facebook.com/meg.kline.3">Friend me.</a> <a href="https://www.linkedin.com/in/meghanklinetuls">Connect with me.</a> 
+  </footer>
+</main>

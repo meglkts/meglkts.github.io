@@ -1,17 +1,20 @@
 html{
 	font-family: Raleway;
 	background-color: #DCDCDC;
+	color: black;
 }
 
 header{
 	color: #800080;
-	font-weight: bold;
 	font-size: 3em;
 	text-align: center;
 	border: 2px solid black;
 
 }
 
+body{
+	margin: 2%;
+}
 h1{
 	font-size: 3em;
 	color: #008B8B; 
@@ -23,6 +26,7 @@ h2{
 	font-weight: bold;
 }
 
+
 #contact-header{
 	text-align: center;
 	margin-top: 10%;
@@ -30,12 +34,14 @@ h2{
 
 p{
 	display: inline-block;
-	margin-left: 2%;
-	margin-right: 2%;
+
 }
 
+
 ul{
-	list-style: none
+	list-style: none;
+	display: inline-block;
+
 }
 
 #photo{
@@ -47,29 +53,39 @@ ul{
 #menu li{
 	font-size: 2em;
 	display: inline;
-	padding-left: 2%;
-	padding-right: 2%;
+	/*padding-left: 5%;
+	padding-right: 5%;*/
 	padding-bottom: 0px;
-	margin-top: 0px;
+	margin-top: 10%;
+	margin-left: 10%;
+
 }
 
 #bloglist{
-	font-weight: bold;
 	font-variant: small-caps;
-	line-height: 120%;
+	line-height: 150%;
+	display: inline-block;
+	color: black;
+	font-weight: bolder;
 }
 
-#bloglinks{
-	font-variant: normal;
-	font-size: 90%;
-	color: #800080;
-}
+
 
 #blogphoto{
-	float: left;
-	padding: 10px;
+	display: inline-block;
+	margin-right: 0px;
 }
 
+#blogpost{
+	margin-left: 5%;
+	margin-right: 10%;
+	color: #008B8B;
+	font-size: 1em;
+	border-left: 5px solid black;
+	padding-left: 5%;
+	font-family: Arial;
+	line-height: 115%;
+}
 #contact-icons{
 	display: block;
 	text-align: center;
@@ -78,11 +94,12 @@ ul{
 a:link{
 	text-decoration: none;
 	color: #B8860B;
+	font-variant: normal;
 	font-weight: normal;
 
 }
 a:hover{
-	font-size: 120%;
+	font-weight: bold;
 }
 a:visited{
 	text-decoration: none;
