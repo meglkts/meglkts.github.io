@@ -20,8 +20,13 @@ h1{
 	display: block;
 }
 
-h3{
+h2{
 	font-weight: bold;
+}
+
+#contact-header{
+	text-align: center;
+	margin-top: 10%;
 }
 
 p{
@@ -63,6 +68,11 @@ ul{
 #blogphoto{
 	float: left;
 	padding: 10px;
+}
+
+#contact-icons{
+	display: block;
+	text-align: center;
 }
 
 a:link{
