@@ -44,20 +44,22 @@ ul{
 
 }
 
-#photo{
-	width: 100%;
+code li{
 	display: block;
+}
+#photo{
+	width: 50%;
+	display: inline-block;
 	padding-top: 0px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
-#menu li{
+#menu{
 	font-size: 2em;
-	display: inline;
-	/*padding-left: 5%;
-	padding-right: 5%;*/
-	padding-bottom: 0px;
-	margin-top: 10%;
-	margin-left: 10%;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 10%;
 
 }
 
