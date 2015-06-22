@@ -32,11 +32,6 @@ h2{
 	margin-top: 10%;
 }
 
-p{
-	display: inline-block;
-
-}
-
 
 ul{
 	list-style: none;
@@ -44,8 +39,9 @@ ul{
 
 }
 
-code li{
-	display: block;
+pre{
+	line-height: 150%;
+	font-size: 1em;
 }
 #photo{
 	width: 50%;

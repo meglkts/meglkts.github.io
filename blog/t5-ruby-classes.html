@@ -16,76 +16,73 @@
     </p>
     <p>
       The class I created is called Right_triangle.  It provides various methods that can be applied to a triangle to test for certain properties.
-      <summary><code>
-      class Right_Triangle
-
-  def initialize(x, y, z)
-    @sides = Array[x, y, z]
-    @sides.sort
-    @a = @sides[0]
-    @b = @sides[1]
-    @c = @sides[2]
-  end
-
-  def right_triangle?
-    if @a**2 + @b**2 == @c**2
-      puts "This is a right triangle because #{@a.to_s}^2 + #{@b.to_s}^2 = #{@c.to_s}^2."
-    else
-      puts "This is not a right triangle because #{@a.to_s}^2 + #{@b.to_s}^2 does not equal #{@c.to_s}^2."
-    end
-  end
-end</code></summary>
     </p>
+      <pre>
+        class Right_Triangle
+
+          def initialize(x, y, z)
+            @sides = Array[x, y, z]
+            @sides.sort
+            @a = @sides[0]
+            @b = @sides[1]
+            @c = @sides[2]
+          end
+
+          def right_triangle?
+            if @a**2 + @b**2 == @c**2
+              puts "This is a right triangle because #{@a.to_s}^2 + #{@b.to_s}^2 = #{@c.to_s}^2."
+            else
+              puts "This is not a right triangle because #{@a.to_s}^2 + #{@b.to_s}^2 does not equal #{@c.to_s}^2."
+            end
+          end
+        end</pre>
     <p>
       This is a very basic class.  The instance variables are defined and initalized in the first method.  I allowed a user to input any 3 integers in any order.  Then in the #intialize method, I reordered them from least to greatest to make the other methods funciton more easily.  You might also consider adding an argument error if the values provided are not numbers.  I originally had an argument error if the 3 sides did not form a right triangle, but instead chose to create a method to assess just that.  That takes us to the class method #right_triangle? that is used to assess whether the three provided side lengths do indeed form a right triangle.  
     </p>
     <p>
       We could add additonal relevant methods to our topic.  Classes are great for provided a variety of methods for a specific topic or assigning a variety of attributes to a subject.  Let's include a couple more methods that might fit into our Right_triangle class that uses the instance variables @a, @b, and @c to represent the sides lengths in ascending order.
     </p>
-    <p>
-      <summary><code>class Right_Triangle
+      <pre>
+        class Right_Triangle
 
-  def initialize(x, y, z)
-    @sides = Array[x, y, z]
-    @sides.sort
-    @a = @sides[0]
-    @b = @sides[1]
-    @c = @sides[2]
-  end
+          def initialize(x, y, z)
+            @sides = Array[x, y, z]
+            @sides.sort
+            @a = @sides[0]
+            @b = @sides[1]
+            @c = @sides[2]
+          end
 
-  def right_triangle?
-    if @a**2 + @b**2 == @c**2
-      puts "This is a right triangle because #{@a.to_s}^2 + #{@b.to_s}^2 = #{@c.to_s}^2."
-    else
-      puts "This is not a right triangle because #{@a.to_s}^2 + #{@b.to_s}^2 does not equal #{@c.to_s}^2."
-    end
-  end
+          def right_triangle?
+            if @a**2 + @b**2 == @c**2
+              puts "This is a right triangle because #{@a.to_s}^2 + #{@b.to_s}^2 = #{@c.to_s}^2."
+            else
+              puts "This is not a right triangle because #{@a.to_s}^2 + #{@b.to_s}^2 does not equal #{@c.to_s}^2."
+            end
+          end
 
-  def state_hypotenuse
-    puts "The hypotenuse of this right triangle is #{@c.to_s} units."
-  end
+          def state_hypotenuse
+            puts "The hypotenuse of this right triangle is #{@c.to_s} units."
+          end
 
-  def find_area
-    area = @a * @b / 2.0
-    puts "The area of this right triangle is #{area.to_s} units."
-  end
- 
-end
+          def find_area
+            area = @a * @b / 2.0
+            puts "The area of this right triangle is #{area.to_s} units."
+          end
+         
+        end
 
-triangle = Right_Triangle.new(3, 4, 5)
-triangle.right_triangle?
-triangle.state_hypotenuse
-triangle.find_area</code><summary>
-    </p>
+        triangle = Right_Triangle.new(3, 4, 5)
+        triangle.right_triangle?
+        triangle.state_hypotenuse
+        triangle.find_area</pre>
     <p>
       Now our class also contains methods that identify the hypotenuse and can calculate the area.  Below our class, we are creating a new object triangle with sides 3, 4, and 5.  The outcome of running our methods on the object triangle will be the following:
     </p>
-    <p>
-      <summary><code>This is a right triangle because 3^2 + 4^2 = 5^2.
-The hypotenuse of this right triangle is 5 units.
-The area of this right triangle is 6.0 units.</code></summary>
-    </p>
-    <p></p>
+      <pre> 
+        This is a right triangle because 3^2 + 4^2 = 5^2.
+        The hypotenuse of this right triangle is 5 units.
+        The area of this right triangle is 6.0 units.</pre>
   </section>
 
   <footer>
