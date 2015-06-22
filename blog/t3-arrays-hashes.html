@@ -19,38 +19,38 @@
     </p>
     <p>
       If you are new to arrays, below are some commands to help explain how to create an array and how to identify certain features in the array.
-      <summary><code>
+      <pre>
         name_array = Array.new
         name_array.push("Meghan", "Lee", "Kline", "Tuls")
         puts name_array[1]
         puts name_array[-1]
         puts name_array.index("Kline")
         puts name_array.index("Meghan")
-      </code></summary>
+      </pre>
         The above lines would yield the following:
-        <summary><code>
+        <pre>
         #creates an empty array named megs_array
         #adds the elements listed to the array in order
         Lee
         Tuls
         2
         0
-        </code></summary>
+        </pre>
         Note how the positions are labeled.  From the beginning we start with 0.  From the end we start with -1.
     </p>
     <p>
       A hash on the other hand does not have an index or an order as an array does.  A hash is a set of keys and values that are matched to one another.  Again, I think of it as an ordered pair, but this time there is no sequence and one of the values in the pair does not need to be a position number.  A hash could be the pair of two strings, the pair of two integers or fixnums, or any combination.  Hopefully you can see why this might be more useful in many applications.  Let's say you want to "jump" to a specific element and its key or value.  In the case of a hash, you don't need to know position, you don't need to sort anything, all you need is one of the two in the pair, key or value, and you can identify its mate.  You can also ask a hash to list its values or list its keys to see what it contains.  A hash is written inside {} brackets rather than square [] brackets.  See the example below to introduce yourself to some of the features of a hash.
-      <summary><code>
+      <pre>
       megs_hash = Hash.new
       megs_hash = {"Name" => "Meghan"}
       megs_hash.store("Age", 28)
       megs_hash.store("Hometown", "Chicago")
       megs_hash.default = "Not in directory"
-      </code></summary>
+      </pre>
       The above code would create a hash.  Note there are different syntax you can use for assigning and adding keys and values.  The first item listed is the key; the second is the value.  The last line containing .default will print if you ask for a key that does not exist in the hash.  This can be useful for identiying holes.
 
       If you then called the following code, you can see what prints to the console.
-      <summary><code>
+      <pre>
       puts megs_hash
       puts megs_hash["Name"]
       puts megs_hash["Age"]
@@ -72,7 +72,7 @@
       Name #these 3 lines are all the keys in the hash
       Age
       Hometown
-      </code></summary>
+      </pre>
       <p>
         This was certainly not an exaustive explanation of arrays, hashes, their differences, and their potentials; however, I hope if gave you a brief view into how to create them and how to identify their elements.  Also, it should give you some insight into how each might be useful depending on the purpose of your code.
       </p>
