@@ -76,13 +76,13 @@ pre{
 	color: black;
 	font-weight: bolder;
 	vertical-align: top;
+	margin-left: 5%;
 }
 
 
 
 #blogphoto{
 	display: inline-block;
-	margin-right: 0px;
 }
 
 #blogpost{
