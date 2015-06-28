@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+  <title>Blog Template</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+</head>
+
+<main>
+  <h1>Post #6:  Object Oriented Programming: Methods</h1>
+  <h2>Instance vs. Class Methods</h2>
+  <h4 id="Date">June 26, 2015</h4>
+
+  <section id="blogpost">
+    <p>
+      Upon being assigned a few OOP topics to choose from, I selected to research and write about instance vs. class methods.  My understanding of classes as a concept in general is something I want to better solidify.  I learn best through doing research, seeing examples, and then applying the concepts in creative practice.  In a recent session with a guide, she demonstrated creating a class method using <code>self</code> within the class.  This did not click for me initially, so I spent some time researching self and exploring how this relates to instance vs. class methods.   
+    </p>
+    <p>
+      Class methods are those that can be called on the original created class.  Instance methods; however, can only be called on new instances of that created class.  I found basic examples like the one below to be helpful in the introduction of this idea.
+    </p>
+    <pre>
+        class Name
+          def initialize(name)
+            @name = name
+          end
+
+          def introduce
+            puts "My name is #{@name}."
+          end
+        end
+      </pre>
+    <p>
+    Within the class <code>Name</code>, an instance method <code>introduce</code> was created.  We can call the method <code>introduce</code> on any instance of the class <code>Name</code>.  I cannot; however, call the method <code>introduce</code> on the class itself.  
+    <pre>
+      dan = Name.new("Dan")
+      dan.introduce           # My name is Dan.
+    </pre>
+    <p>
+      However if we try to call the following, we will get an error.
+    </p>
+    <pre>
+      Name.introduce          #undefined method 'introduce' for Name:Class
+    </pre>
+    <p>
+      We can define a class method as well.
+    </p>
+    <pre>
+      class Name
+          def self.class_method
+            puts "I am calling a class method now."
+          end
+
+          def initialize(name)
+            @name = name
+          end
+
+          def introduce
+            puts "My name is #{@name}."
+          end
+        end
+    </pre>
+    <p>
+      We can then call the class method.
+    </p>
+    <pre>
+      Name.class_method       # I am calling a class method now.
+
+      dan.class_method        # undefined method 'class_method' for (instance of Name class)  
+    </pre>
+    <p>
+      Below is a class I created to experiment with my understanding of instance verses class variables that imitated my recent assignment.
+    </p>
+    <pre>
+      ROSTER = {:Audrey=> {position: "setter", jersey: 1}, :Juana => {position: "libero", jersey: 21}, :Rut => {position: "defense", jersey: 3}}
+
+      class VolleyballPlayer
+        
+        def self.introduce_team
+          puts "This is a class method"
+          ROSTER.each do |player, info|
+            puts "Number #{ROSTER[player][:jersey]} is #{player} playing #{ROSTER[player][:position]}"
+          end
+        end
+
+        def initialize(player, position, jersey)
+          @player = player
+          @position = position
+          @jersey = jersey
+        end
+
+        def introduce_player
+          puts "This is an instance of the class VolleyballPlayer"
+          puts "Number #{@jersey.to_s} is #{@player} playing #{@position.to_s}."
+        end
+      end
+
+
+      audrey = VolleyballPlayer.new("Audrey", ROSTER[:Audrey][:position], ROSTER[:Audrey][:jersey])
+      audrey.introduce_player
+
+      rut = VolleyballPlayer.new("Rut", ROSTER[:Rut][:position], ROSTER[:Rut][:jersey])
+      rut.introduce_player
+
+      juana = VolleyballPlayer.new("Juana", ROSTER[:Juana][:position], ROSTER[:Juana][:jersey])
+      juana.introduce_player
+
+      VolleyballPlayer.introduce_team
+    </pre>
+    <p>This would result in the following pritning to the console:</p>
+    <pre>
+      This is an instance of the class VolleyballPlayer
+      Number 1 is Audrey playing setter.
+      This is an instance of the class VolleyballPlayer
+      Number 3 is Rut playing defense.
+      This is an instance of the class VolleyballPlayer
+      Number 21 is Juana playing libero.
+      This is a class method
+      Number 1 is Audrey playing setter
+      Number 21 is Juana playing libero
+      Number 3 is Rut playing defense
+    </pre>
+    <p>
+      Instance methods are the best option for creating single instances of a class.  Like one version of a player introduction, in my case.  In the case of wanting to create a series of instances or a data table, for example, you might consider creating a class method that generates a group of instances.
+    </p>
+  </section>
+
+  <aside>
+      <a href="#"><img src="../imgs/email.png"/></a>
+      <a href="https://www.google.com/+MegTuls"target="_blank"><img src="../imgs/google_plus.png"/></a>
+      <a href="https://twitter.com/meglkts"target="_blank"><img src="../imgs/twitter.png"></a>
+      <a href="https://www.facebook.com/meg.kline.3" target="_blank"><img src="../imgs/facebook.png"/></a>
+      <a href="https://www.linkedin.com/in/meghanklinetuls"target="_blank"><img src="../imgs/linkedin.png"/></a>
+      <a href="https://github.com/meglkts"target="_blank"><img src="../imgs/github_alt.png"/></a>
+    </aside>
+
+  <footer>
+    Established May 2015.  
+  </footer>
+</main>
