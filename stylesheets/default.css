@@ -4,28 +4,115 @@ html{
 	color: black;
 }
 
+/*header for all pages*/
 header{
 	color: #800080;
-	font-size: 3em;
-	text-align: center;
+	font-size: 3.5em;
+	display: block;
+	position: fixed;
+	padding-left: 3%;
+	padding-bottom: 1%;
+	width: 100%;
+	left: -1%;
+	/*text-align: center;*/
 	border: 2px solid black;
+	z-index: 1;
+}
 
+/*SITE INDEX STYLING*/
+#photo{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	left: 0%;
+	right: 0%;
+	bottom: 0;
+	top: 20%;
+	display: block;
+}
+
+#menu li a{
+	top: 70%;
+	font-size: 2em;
+	display: inline;
+	vertical-align: top;
+	height: 50%;
+	width: 100%;
+}
+
+#about {
+	background-color: #800080;
+	color: #DCDCDC;
+	display: inline-block;
+	text-align: center;
+	padding: 1% 0%;
+	width: 32%;
+	left: 1%;
+	top: 70%;
+	position: absolute;
+}
+
+#blog{
+	background-color: #008B8B;
+	color: #DCDCDC;
+	display: inline-block;
+	text-align: center;
+	padding: 1% 0%;
+	width: 32%;
+	left: 34%;
+	top: 70%;
+	position: absolute;
+}
+
+#projects {
+	/*background-color: #B8860B;*/
+	background-color: black;
+	color: #DCDCDC;
+	display: inline-block;
+	text-align: center;
+	padding: 1% 0%;
+	width: 32%;
+	left: 67%;
+	top: 70%;
+	position: absolute;
 }
 
 body{
-	margin: 2%;
+	margin: 2% 5%;
 }
+
+main{
+	position: absolute;
+}
+
+main h1, h2, h4{
+	font-family: times;
+}
+
 h1{
+	position: absolute;
+	margin-top: 10%;
+	width: 10%;
 	font-size: 3em;
 	color: #008B8B; 
 	margin-bottom: 0px;
 	display: block;
 }
 
-h2{
+h3{
 	font-weight: bold;
+	font-size: 1.5em;
+	font-family: times;
 }
 
+h2{
+	font-size: 3em;
+	color: #008B8B; 
+	margin-bottom: 0px;
+	margin-top: 10%;
+	display: block;
+	position: static;
+}
 
 #contact-header{
 	text-align: center;
@@ -44,23 +131,11 @@ pre{
 	font-size: 1em;
 	color: black;
 }
-#photo{
-	width: 50%;
-	display: inline-block;
-	padding-top: 0px;
-	margin-left: 10%;
-	margin-right: 10%;
-}
 
-#menu{
-	font-size: 2em;
-	display: inline-block;
-	vertical-align: top;
-	padding-top: 10%;
-
-}
-
+/*ABOUT ME PAGE*/
 #about-me{
+	position: absolute;
+	margin-top: 10%;
 	margin-left: 15%;
 	margin-right: 20%;
 	font-size: 1em;
@@ -70,20 +145,29 @@ pre{
 	line-height: 150%;
 }
 
+#blog-index-header{
+	top: 20%;
+	position: absolute;
+}
+
 #bloglist{
 	font-variant: small-caps;
+	font-size: 1em;
+	position: relative;
 	line-height: 150%;
 	display: inline-block;
 	color: black;
 	font-weight: bolder;
 	vertical-align: top;
 	margin-left: 5%;
+	margin-top: 10%;
 }
-
-
 
 #blogphoto{
 	display: inline-block;
+	position: relative;
+	width: 20%;
+	margin-top: 10%;
 }
 
 #blogpost{
@@ -96,6 +180,16 @@ pre{
 	font-family: Arial;
 	line-height: 150%;
 }
+
+#post-background{
+	/*position: fixed;*/
+	/*display: block;*/
+	/*top: 0;*/
+	height: 100px;
+	background-color: red;
+}
+
+
 #contact-icons{
 	display: block;
 	text-align: center;
@@ -122,22 +216,28 @@ a:active{
 
 aside{
 	position: fixed;
-	top: 30%;
+	top: 8%;
+	/*top: 30%;*/
 	right: 5%;
+	z-index: 2;
+	
+
 }
 aside a{
-	display: block;
+	display: inline-block;
 	margin-right: 0px;
-	padding: 1%;
+	/*padding: 1%;*/
 	text-align: right;
 }
 
 footer{
 	font-size: 1em;
+	position: absolute;
 	display: block;
 	width: 100%;
 	text-align: center;
 	margin-top: 10%;
+	margin-bottom: 2%;
 	top: 95%;
-	bottom: 5%;
+	bottom: 10%;
 }
