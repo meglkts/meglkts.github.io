@@ -214,19 +214,19 @@ pre{
 	color: #008B8B;
 	font-size: 1em;
 	border-left: 5px solid black;
+	margin-top: 16%;
 	padding-left: 10%;
 	font-family: Arial;
 	line-height: 150%;
 }
 
-#post-background{
-	/*position: fixed;*/
-	/*display: block;*/
-	/*top: 0;*/
-	height: 100px;
-	background-color: red;
+#post-heading{
+	background-color: #DCDCDC;
+	position: fixed;
+	display: block;
+	top: 0%;
+	width: 100%;
 }
-
 
 #contact-icons{
 	display: block;
