@@ -2,6 +2,7 @@ html{
 	font-family: Raleway;
 	background-color: #DCDCDC;
 	color: black;
+	padding: 0;
 }
 
 /*header for all pages*/
@@ -14,6 +15,7 @@ header{
 	padding-bottom: 1%;
 	width: 100%;
 	left: -1%;
+	right: -1%;
 	/*text-align: center;*/
 	border: 2px solid black;
 	z-index: 1;
@@ -267,7 +269,6 @@ aside{
 	right: 5%;
 	z-index: 2;
 	
-
 }
 aside a{
 	display: inline-block;
@@ -280,8 +281,8 @@ footer{
 	font-size: 1em;
 	position: absolute;
 	display: block;
-	width: 100%;
+	width: 90%;
 	text-align: center;
-	margin-top: 5%;
-	margin-bottom: 2%;
+	bottom: 2%;
+	
 }
