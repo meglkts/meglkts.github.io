@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+  <title>Post t7</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="../imgs/favicon.ico"/>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+
+<header>meghan kline tuls</header>
+
+<main>
+<section id="post-heading">
+  <h2>Post #7: Ruby vs. JavaScript</h2>
+  <h3>How do Ruby Hashes compare to JS Objects?</h3>
+  <h4 id="Date">July 7, 2015</h4>
+</section>
+
+  <ul id="blog-menu">
+        <li id="about"><a href="https://meglkts.github.io/about_me">About Me</li></a>
+        <li id="blog"><a href="https://meglkts.github.io/blog/index.html">Blog Spot</li></a>
+        <li id="projects"><a href="#">My Projects</li></a>
+        <!-- <li id="contact"><a href="https://meglkts.github.io/contact.html">Contact Me</li></a> -->
+  </ul>
+
+  <section id="blogpost">
+    <p>
+      In my educaiton psych classes in college we talked about knowledge acquisition and how it depends on a person's ability to connect new concepts with information already possessed.  In my experience exploring programming, I have found myself thinking about this often regarding my own learning.  When introducted to Ruby, I connected it to Algebra.  As I am diving into JavaScript, I like connect it to what I have learned so far about Ruby.  The more relationships and connections we make, the more easily we learn new information and skills.
+    </p>
+    <p>
+      In this post, I am going to compare the use of hashes in Ruby to that of objects in JavaScript.  In my limited experience thus far, I have found them more similar than not.  I know there are nuances and other conceptual discrepancies I have yet to fully understand, but I am going to focus on how you might create a similar structure in both Ruby and JavaScript and how you can apply the syntax rules of each language to accomplish this.
+    </p>
+    <p>
+      Let's say we would like to create a programming structure that contains key properties of a person's identity.  Let's name our structure "identity" and show how you might add these key properties in each of our languages of focus.
+    </p>
+    <h5>Ruby Hash</h5>
+    <pre class="prettyprint">
+      1   identity = Hash.new                 #{}
+      2   identity[:name] = "Meghan Kline"
+      3   identity[:age]  = 25
+      4   identity[:hometown] = "Chicago"
+      5   p identity
+    </pre>
+    <p>This will print the following to the console:</p>
+    <pre class="prettyprint">
+      {:name=>"Meghan Kline", :age=>25, :hometown=>"Chicago"}
+    </pre>
+    <h5>JavaScript Object</h5>
+    <pre class="prettyprint">
+      1   var identity = {}                 #{}
+      2   identity.name = "Meghan Kline"
+      3   identity.age  = 25
+      4   identity.hometown = "Chicago"
+      5   console.log(identity)
+    </pre>
+    <p>This will print the following to the console:</p>
+    <pre class="prettyprint">
+      { name: 'Meghan Kline', age: 25, hometown: 'Chicago' }
+    </pre>
+    <p>As you can see, the creation of a Ruby hash and a JS object are quite similar with a few syntactic differences.  In the hash the keys are symbols in this case and the values are either strings or numbers.  In the JS object the properties are specified and the values are again either strings or numbers.  We can retrieve the value of any given key/property by using appropriate syntax.</p>
+    <h5>Ruby Hash</h5>
+    <pre class="prettyprint">
+      6   identity[:name]   # "Meghan Kline"
+      7   identity.key(25)  # :age
+    </pre>
+    <h5>JS Object</h5>
+    <pre class="prettyprint">
+      6   identity.name     // 'Meghan Kline'
+      7   identity["name"]  // 'Meghan Kline'
+      // There is not an easy built in method for retrieving a property 
+      // for a given value like using hash.key(value) in Ruby.
+    </pre>
+    <p>
+      In general, there are many more built in methods in Ruby that allow you to manipulate hashes and other Ruby objects in many ways.  JavaScript will allow for more variabiltiy than Ruby, but does not present errors as easily, which can often lead to a difficult debugging process when your code does not return what you expect.  However, there are ways to modify values and iterate over objects in JS similar to Ruby.  The problem is that it's more difficult to modify or access the "key" equivalent in JS than in Ruby.
+    </p>
+    <p>Let's modify some of the values in each of our structures.  Let's say this Meghan character gets married and hyphenates her name to Kline-Tuls.  Also, she's aged since then to 28.  And she has since moved to sunny San Diego.</p>
+    <h5>Ruby Hash</h5>
+    <pre class="prettyprint">
+      8   identity[:name] = "Meghan Kline-Tuls"
+      9   identity[:age]  = 28
+      10  identity[:hometown] = "San Diego"
+    </pre>
+    <h5>JS Object</h5>
+    <pre class="prettyprint">
+      8   identity.name = "Meghan Kline-Tuls"
+      9   identity["age"]  = 28
+      10  identity.hometown = "San Diego"
+    </pre>
+    <p>Another feature that is slightly different between the structures is how to iterate over each.</p>
+    <h5>Ruby Hashes</h5>
+    <pre class="prettyprint">
+      identity.each do |property, value|
+        puts "The person's #{property} is #{value}."
+      end
+    </pre>
+    <h5>JS Object</h5>
+    <pre class="prettyprint">
+      for (var property in identity) {
+  console.log("The person's " + property + " is " +  identity[property] + ".");
+}
+    </pre>
+    <p>Both codes will print the same information to the console:</p>
+    <pre>
+      The person's name is Meghan Kline-Tuls.
+      The person's age is 28.
+      The person's hometown is San Diego.
+    </pre>
+  </section>
+
+  <aside>
+      <a href="https://meglkts.github.io/index.html">Home</a>
+      <a href="mailto:meglktuls@gmail.com"><img src="../imgs/email.png"/></a>
+      <a href="https://www.google.com/+MegTuls"target="_blank"><img src="../imgs/google_plus.png"/></a>
+      <a href="https://twitter.com/meglkts"target="_blank"><img src="../imgs/twitter.png"></a>
+      <a href="https://www.facebook.com/meg.kline.3" target="_blank"><img src="../imgs/facebook.png"/></a>
+      <a href="https://www.linkedin.com/in/meghanklinetuls"target="_blank"><img src="../imgs/linkedin.png"/></a>
+      <a href="https://github.com/meglkts"target="_blank"><img src="../imgs/github_alt.png"/></a>
+    </aside>
+
+  <footer>
+    Established May 2015.  
+  </footer>
+</main>
