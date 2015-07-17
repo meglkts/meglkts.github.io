@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Meg's Personal Website</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/cheat-sheet.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="imgs/favicon.ico"/>
+	</head>	
+ <body>
+    <section id=wrapper>
+        <header><h2>CHEAT SHEET</h2></header>
+        <section id=leftMenu>
+            <h3>GIT Shortcuts</h3>
+            <table>
+                <tr>
+                    <td><a href=#remote>Setting Remotes</a></td>
+                </tr>
+                <tr>
+                    <td><a href=#fetch>Fetching Changes</a></td>
+                </tr>
+                <tr>
+                    <td><a href=#fork>Forking & Cloning</a></td>
+                </tr>
+                <tr>
+                    <td><a href=#pull>Pull Requests</a></td>
+                </tr>
+            </table>
+        </section>
+        <section id=rightMenu>
+            <h3>Looping in Ruby & JavaScript</h3>
+            <table>
+                <tr>
+                    <td><a href=#ruby>Looping in Ruby</a></td>
+                </tr>
+                <tr>
+                    <td><a href=#javascript>Looping in JavaScript</a></td>
+                </tr>
+            </table>
+        </section>
+        <section id=mainText>
+            <h3>GIT Shortcuts</h3>
+            <h4><a name="remote">Setting Remotes</a></h4>
+                <p>
+                    Make sure you are in the correct directory for fetching.  
+                </p>
+                    <pre>
+        $ git remote -v
+        # List the current remotes
+        # origin  https://github.com/[your_username_here]/repo.git (fetch)  #This will either have https or ssh url
+        # origin  https://github.com/[your_username_here]/repo.git (push)
+        
+        $ git remote add upstream https://github.com/Devbootcamp/phase-0-unit-1.git 
+        # You are adding Devbootcamp's repository saying you want to be able to fetch (grab changes) from it.
+                        
+        $ git remote -v
+
+        # origin    https://github.com/[your_username_here]/repo.git (fetch)
+        # origin    https://github.com/[your_username_here]/repo.git (push)
+        # upstream  https://github.com/Devbootcamp/phase-0-unit-1.git (fetch)
+        # upstream  https://github.com/Devbootcamp/phase-0-unit-1.git (push)
+                    </pre>
+ 
+            <h4><a name="fetch">Fetching Changes</a></h4>
+                <p>
+                    Before you can fetch changes from an upstream branch, make sure you set the remote by reading the above section.
+                </p>
+                    <pre>
+        $ git fetch upstream <i>&ltbranch-name&gt</i>
+        # this will grab the upstream remote's branches
+        
+        $ git merge upstream/<i>&ltbranch-name&gt</i>
+        # this will merge the upstream branch into your local, forked repository
+                        
+        $ git commit -m "Add Dev Bootcamp's changes"
+
+        $ git push origin master
+                    </pre>
+            
+            <a href=https://www.youtube.com/watch?v=5IIPWznBvok>A helpful video from DBC</a>
+                
+            <h4><a name="fork">Forking & Cloning</a></h4>
+                <p>
+                    On the GitHub website, direct yourself to the desired respository.  In the upper right corner you will see the fork icon and button.  When you select fork, click your personal GitHub account as the location.  Then you will want to make sure the issues box in the features section is selected so your cohortmates can view your work and provide feedback.
+                </p>
+            <a href=https://www.youtube.com/watch?v=kRtvX25drNo>A short video about forking</a>
+            <p>
+                Navigate to your new repo that's under your username (not the original forked repo!). On the right side of the screen, select the 'clone URL' by clicking on the 'copy to clipboard' button. In terminal, type the following command in the directory that you want the repo to live. DO NOT clone a repo inside of another repo!
+            </p>
+                <pre>
+         $ git clone <i>&ltlink to repo&gt</i>
+                </pre>
+           
+            <h4><a name="pull">Pull Requests</a></h4>
+                <p>
+                    It is generally considered good GitHub workflow to create a new branch when you are working on a new project.  This way, if you have errors, you are not yet altering the master branch.  The terminal commands below will allow you to create a new branch.  Once the new branch is created, you should make your changes and updates to your project in that branch.  Then after you are satisfied with your work, you can make a pull merge request to combine the versions and store your final work on the master branch.
+                </p>
+                <pre>
+         $ git checkout -b <i>&lttemporary branch name&gt</i>
+            </pre>
+            <p>
+                Make sure that you add and commit your changes before merging the changes.  Once you are ready to combine your temporary branch files with your master branch, you can use the following commands in the terminal.
+            </p>
+            <pre>
+        $ git co master
+        # moves you to the master branch
+        
+        $ git pull
+        
+        $ git co <i>&lttemporary branch name&gt</i>
+        
+        $ git merge master
+        
+        $ git push origin <i>&lttemporary branch name&gt</i>
+            </pre>
+            <p>
+                Next you will need to navigate to your profile on GitHub to complete the pull request.  See the VERY helpful link below for step-by-step instructions and screenshots of the process.
+            </p>
+            <a href=https://github.com/meglkts/phase-0-unit-1/blob/master/week-1/tracking-changes/making-pull-requests.md>Guide to Making Pull Requests</a>
+            <h3>Looping in Ruby & JavaScript</h3>
+                <p>
+                    
+                </p>
+            <h4><a name="ruby">Looping in Ruby</a></h4>
+                <p>
+                    
+                </p>
+            <h4><a name="javascript">Looping in JavaScript</a></h4>
+                <p>
+                    
+                </p>
+        </section>
+    </section>       
+ </body>     
+</html>

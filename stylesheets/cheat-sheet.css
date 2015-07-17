@@ -1,0 +1,39 @@
+header {
+    color: black;  
+}
+
+#wrapper {
+  min-width: 80%;
+  max-width:81%;
+  margin: auto;
+}
+
+#leftMenu {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top; 
+    padding: 2%;
+    background-color: #E46425;
+    height: 200px;
+    border-radius: 10px;
+    color: white;
+}
+
+#rightMenu {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top; 
+    padding: 2%;
+    background-color: #5AADC5;
+    height: 200px;
+    border-radius: 10px;
+    color: white;
+}
+
+table {
+    text-indent: 20px;
+}
+
+a:link {
+    text-decoration: none;
+}
